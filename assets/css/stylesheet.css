@@ -1,13 +1,14 @@
-body{
-	background-image: url(../images/background.jpg);
+body
+{
+    background-image: url(../images/background.jpg);
 }
 
-h1{
-	text-align: center;
-	
+h1
+{
+    text-align: center;
 }
 
-.container.row.jumbotron{
-	opacity: 0.5;
+.container.row.jumbotron
+{
+    opacity: .5;
 }
-

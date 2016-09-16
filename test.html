@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<div id=test>Test Div</div>
+		<form>
+			<p class="trainName">Train Name</p>
+			<div class="input-group">
+				<input id="trainNameInput" type="text" class="form-control">
+			</div>
+		</form>
+		<button id="button">Submit</button>
+
+			<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
+			<script src="https://www.gstatic.com/firebasejs/3.3.2/firebase.js"></script>
+			<script type="text/javascript">
+				var config = {
+			apiKey: "AIzaSyDq41dxHuwoobNc62iBc7lippjTSmNEalg",
+			authDomain: "codersbay-92de3.firebaseapp.com",
+			databaseURL: "https://codersbay-92de3.firebaseio.com",
+			storageBucket: "codersbay-92de3.appspot.com",
+			messagingSenderId: "464617280593"
+			};
+			firebase.initializeApp(config);
+
+			var database = firebase.database();
+
+			$('#button').on('click', function(){
+				var trainName = $('#trainNameInput').val().trim();
+
+			database.ref().push({
+				name: trainName
+			});
+
+
+			return false;
+			})
+
+			
+
+
+					
+			</script>
+		</body>
+	</html>
